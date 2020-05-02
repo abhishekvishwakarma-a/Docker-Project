@@ -1,0 +1,38 @@
+version: "3.7"
+services:
+    www:
+        build: .
+        ports: 
+            - "8082:80"
+        volumes:
+            - ./www:/var/www/html/
+        links:
+            - db
+        networks:
+            - default
+    db:
+        image: mysql:8.0.19
+        ports: 
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: myDb
+            MYSQL_USER: root
+            MYSQL_PASSWORD: redhat
+            MYSQL_ROOT_PASSWORD: redhat
+        volumes:
+            - ./dump:/docker-entrypoint-initdb.d
+            - persistent:/var/lib/mysql
+        networks:
+            - default
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin:5.0.1
+        links: 
+            - db:db
+        ports:
+            - "8083:80"
+        environment:
+            MYSQL_USER: root
+            MYSQL_PASSWORD: redhat
+            MYSQL_ROOT_PASSWORD: redhat
+volumes:
+    persistent:
