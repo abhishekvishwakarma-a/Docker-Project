@@ -1,4 +1,4 @@
-# Docker-Project
+ Docker-Project
 # setup MySQL Server + PHP7 +  phpMyAdmin with docker
 
 process steps-
@@ -14,3 +14,8 @@ process steps-
 ![screenshot5](https://user-images.githubusercontent.com/64468093/80899378-4cbd8e00-8d07-11ea-95a0-ae3a9607e63e.jpg)
 
 file location--
+
+![Screenshots-location](https://user-images.githubusercontent.com/64468093/80899409-9d34eb80-8d07-11ea-810b-8e955f6a3173.jpg)
+
+
+in this way you can do the project 
