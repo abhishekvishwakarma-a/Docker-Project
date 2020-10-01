@@ -1,5 +1,5 @@
- Docker-Project
-# setup MySQL Server + PHP7 +  phpMyAdmin with docker
+       Docker_Project
+# setup MySQL Server + PHP7 +  phpMyAdmin with Docker
 
 process steps-
 
